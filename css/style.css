@@ -2,67 +2,108 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: lightcyan;
-}
-
 body {
-  background-color: rgb(243, 252, 252);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: linen;
 }
 
-h1 {
-  font-size: 3rem;
-  /*font-style: italic;*/
-  padding: 1rem;
-  color: rgb(112, 159, 165);
-  border-bottom: 10px double rgb(112, 159, 165);
-  /* font-family: 'Special Elite', cursive; */
-  font-family: "Antic Slab", serif;
+header {
+  background-color: rgb(23, 23, 24);
+  width: 100%;
+  margin: 0 auto;
+  height: 110px;
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+}
+
+header nav ul {
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+  color: ivory;
+  background-color: slategray;
+}
+
+header ul li a {
+  padding: 2.5rem;
+  color: ivory;
 }
 
 main {
-  width: 80%;
-  margin: 3rem auto;
+  margin: 0 auto;
+  width: 960px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-article {
-  border: 1px solid rgb(112, 159, 165);
-  padding: 1rem;
-  margin: 1rem;
+main article h3 {
+  display: inline-flex;
+  width: 20rem;
+  color: black;
+  justify-content: left;
+  font-size: x-large;
 }
 
-h2 {
-  color: rgba(112, 159, 165);
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+main > section {
+  display: flex;
+  size: 50pt;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-h3 {
-  color: rgb(112, 159, 165);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  /* font-family: 'Special Elite', cursive; */
-  font-family: "Antic Slab", serif;
+main article {
+  float: right;
+  width: 480px;
+  padding: 1rem 0 0 2rem;
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+  text-justify: auto;
 }
 
-ul {
-  margin-left: 1rem;
-  list-style: square;
-  margin-bottom: 1rem;
+main article section {
+  overflow: scroll;
+  height: 180px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-p {
-  margin-bottom: 1rem;
+main article a {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding-block: 0.5rem;
+  width: 10rem;
+  color: black;
+  justify-content: center;
+  font-size: larger;
+  text-decoration: none;
+  border: solid black;
 }
-
 footer {
-  padding: 1rem;
+  padding-top: 30px;
+  background-color: rgb(23, 23, 24);
+  width: 100%;
+  margin: 0 auto;
+  height: 110px;
+  text-align: center;
 }
 
-a {
-  color: rgb(112, 159, 165);
+footer > a {
+  font-size: 50px;
+  text-decoration: none;
+  color: crimson;
 }
 
 table {
