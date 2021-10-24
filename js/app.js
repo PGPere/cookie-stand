@@ -156,3 +156,18 @@ cityArray[i].renderTable();
 }
 renderFooter();
 console.log(cityArray[0].cookiesSoldEachHourArray[0]);
+
+let myForm = document.getElementById('form');
+
+function handleSubmit(event) {
+  // console.log(event);
+  event.preventDefault();
+  let userCity = event.target.Cityname.value;
+  // console.log(typeof userFirstName); // values come as strings
+  // let userLastName = event.target.lastname.value;
+  console.log(userCity);
+}
+
+myForm.addEventListener('submit', handleSubmit);
+
+

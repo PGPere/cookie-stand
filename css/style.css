@@ -9,8 +9,15 @@ body {
 header {
   background-color: rgb(23, 23, 24);
   width: 100%;
-  margin: 0 auto;
+  margin: 2 rem 0 0 0;
   height: 110px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+header > h1 {
+  color: ivory;
+  font-size: 4rem;
 }
 
 nav {
