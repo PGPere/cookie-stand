@@ -137,3 +137,30 @@ thead th {
 tfoot {
   background-color: rgba(112, 159, 165, 0.1);
 }
+
+form {
+  color: white;
+  margin-left: 1rem;
+  width: 1090px;
+  background-color: blue;
+  padding: 30px;
+}
+
+input {
+  /* display: block; */
+  margin-bottom: 25px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+label {
+  /* display: block; */
+}
+
+select {
+  display: block;
+  margin-bottom: 25px;
+}

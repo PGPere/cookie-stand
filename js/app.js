@@ -155,19 +155,39 @@ for (let i = 0; i < cityArray.length; i++) {
 cityArray[i].renderTable();
 }
 renderFooter();
-console.log(cityArray[0].cookiesSoldEachHourArray[0]);
+
+// Create Form Section //
 
 let myForm = document.getElementById('form');
 
+
+
 function handleSubmit(event) {
-  // console.log(event);
   event.preventDefault();
   let userCity = event.target.Cityname.value;
-  // console.log(typeof userFirstName); // values come as strings
-  // let userLastName = event.target.lastname.value;
+  let userMinCookies = event.target.MinSales.value;
+  let userMaxCookies = event.target.MaxSales.value;
+  let userAvgCookies = event.target.AvgSales.value;
   console.log(userCity);
+  console.log(userMinCookies);
+  console.log(userMaxCookies);
+  console.log(userAvgCookies);
+  new City(
+    userCity,
+    userMinCookies,
+    userMaxCookies,
+    userAvgCookies,
+    [],
+    0
+  );
+  cityArray[5].renderTable();
+  renderFooter();
 }
 
 myForm.addEventListener('submit', handleSubmit);
+
+
+
+
 
 
