@@ -83,26 +83,26 @@ City.prototype.renderTable = function() {
 };
 
 function renderFooter() {
-  let allstoresallhours = 0;
-  let tr = document.createElement('tr');
-  cityTFoot.appendChild(tr);
-  let td = document.createElement('td');
-  td.textContent = "Totals";
-  tr.appendChild(td);
 
-  for (let i = 0; i < hours.length-1; i++) {
-  let td = document.createElement('td');
-  let allstorestotalperhour = 0;
-   for (let j = 0; j < cityArray.length; j++) {
-   allstorestotalperhour += cityArray[j].cookiesSoldEachHourArray[i];
-   allstoresallhours += cityArray[j].cookiesSoldEachHourArray[i];
+  let allstoresallhours = 0;
+  let td = document.getElementById('td0');
+  td.innerHTML =  "Totals";
+
+  for (let i = 1; i < hours.length; i++) {
+    let Tdi = 'td' + i;
+    let td = document.getElementById(Tdi);
+     let allstorestotalperhour = 0;
+     for (let j = 0; j < cityArray.length; j++) {
+      allstorestotalperhour += cityArray[j].cookiesSoldEachHourArray[i-1];
+    }  
+    td.innerHTML = allstorestotalperhour;
+    allstoresallhours = allstoresallhours + allstorestotalperhour;
   }
-  td.textContent = allstorestotalperhour;
-  tr.appendChild(td);
-  }
-  let tdTotal = document.createElement('td');
-  tdTotal.textContent = allstoresallhours;
-  tr.appendChild(tdTotal);
+  let Tdi = 'td' + hours.length;
+  let tdTotal = document.getElementById(Tdi);
+  // console.log(allstoresallhours);
+  tdTotal.innerHTML = allstoresallhours;
+
 };
 
 new City(
@@ -168,10 +168,6 @@ function handleSubmit(event) {
   let userMinCookies = event.target.MinSales.value;
   let userMaxCookies = event.target.MaxSales.value;
   let userAvgCookies = event.target.AvgSales.value;
-  console.log(userCity);
-  console.log(userMinCookies);
-  console.log(userMaxCookies);
-  console.log(userAvgCookies);
   new City(
     userCity,
     userMinCookies,
@@ -180,11 +176,15 @@ function handleSubmit(event) {
     [],
     0
   );
-  cityArray[5].renderTable();
+  cityArray[(cityArray.length-1)].renderTable();
+  
   renderFooter();
+  form.reset();
 }
 
 myForm.addEventListener('submit', handleSubmit);
+
+
 
 
 

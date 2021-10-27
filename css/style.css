@@ -135,13 +135,19 @@ thead th {
   vertical-align: middle;
 }
 tfoot {
-  background-color: rgba(112, 159, 165, 0.1);
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  height: 2rem;
+  background-color: darkblue;
+  color: white;
+  font-size: large;
+  text-align: center;
 }
 
 form {
   color: white;
   margin-left: 1rem;
-  width: 1090px;
+  width: 1150px;
   background-color: blue;
   padding: 30px;
 }
